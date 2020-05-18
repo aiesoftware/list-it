@@ -1,0 +1,124 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+
+/* Global */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+.container {
+  padding: 1rem;
+}
+
+.btn {
+  padding: 0.7rem;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+.btn-full {
+  width: 100%;
+  letter-spacing: 1.5px;
+}
+
+.btn-primary {
+  background-color: lightblue;
+}
+
+.btn-secondary {
+  background-color: #fa8264
+}
+
+/* Add Item */
+
+.item-input {
+  margin-bottom: 2rem;
+}
+
+.item-input input {
+  display: block;
+  border: none;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid lightgray;
+  font-family: Indie Flower;
+  height: 30px;
+  font-size: 2rem;
+}
+
+.item-input input::placeholder {
+  text-transform: capitalize;
+}
+
+/* Item list */
+
+.item-list {
+  list-style: none;
+  height: 70vh;
+}
+
+.item-list .item {
+  position: relative;
+  font-family: 'Montserrat';
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+.item-list .item input[type="checkbox"] {
+  opacity: 0;
+  width: 1em;
+  height: 1em;
+  position:absolute;
+  top: 1em;
+}
+
+.item-list .item input[type="checkbox"]:checked ~ svg {
+  border-color: #fa8264
+}
+
+.item-list .item input[type="checkbox"] ~ svg path {
+  stroke: #000;
+}
+
+.item-list .item input[type="checkbox"]:checked ~ label {
+  text-decoration: line-through;
+}
+
+.item-list .item svg {
+  width: 1em;
+  height: 1em;
+  border: 2px solid #eee;
+  position: absolute;
+  top: 0.1em;
+}
+
+.item-list .item svg path {
+  transition: stroke-dashoffset .4s linear;
+}
+
+.item-list .item input[type="checkbox"]:checked ~ svg path {
+  stroke-dashoffset: 0;
+  stroke: currentColor;
+}
+
+.item-list .item label {
+  display: block;
+  padding-left: 1.2em;
+  position: relative;
+  color: gray;
+  top: 0;
+}
+
+
+
+
+
