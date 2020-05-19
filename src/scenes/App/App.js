@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import classes from './App.module.css';
 
 const App = () => {
   return (

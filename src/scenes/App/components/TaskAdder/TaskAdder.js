@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import classes from './TaskAdder.module.css';
 
 const TaskAdder = () => {
   return (

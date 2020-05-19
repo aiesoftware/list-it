@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import classes from './TaskClearer.module.css';
 
 const TaskClearer = () => {
   return (
