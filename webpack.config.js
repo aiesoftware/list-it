@@ -42,7 +42,8 @@ module.exports = {
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    writeToDisk: true
+    writeToDisk: true,
+    watchContentBase: true
   },
   mode: 'development'
 }
