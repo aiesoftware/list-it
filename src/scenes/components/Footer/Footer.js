@@ -3,7 +3,9 @@ import classes from './Footer.module.css';
 
 const Footer = () => {
   return (
-    <h1>Footer</h1>
+    <footer className={classes.container}>
+      © 2017-2020 AIE Software. All rights reserved.
+    </footer>
   )
 };
 

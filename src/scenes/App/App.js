@@ -9,13 +9,17 @@ import TaskClearer from './components/TaskClearer';
 
 const App = () => {
   return (
-    <section className={classes.container}>
+    <Fragment>
       <Header />
-      <TaskAdder />
-      <TaskList />
-      <TaskClearer />
+
+      <main className={classes.container}>
+        <TaskAdder />
+        <TaskList />
+        <TaskClearer />
+      </main>
+      
       <Footer />
-    </section>
+    </Fragment>
   );
 };
 

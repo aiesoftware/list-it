@@ -1,9 +1,20 @@
 import React, {Component} from 'react';
 import classes from './TaskList.module.css';
 
+import Task from './components/Task';
+
 const TaskList = () => {
   return (
-    <h1>TaskList</h1>
+    <div>
+      <ul className={classes.itemList}>
+        <li className={classes.item}>
+          <Task 
+            id="1"
+            text="Morning stretches"
+          />
+        </li>
+      </ul>
+    </div>
   )
 };
 

@@ -1,9 +1,21 @@
-import React, {Component} from 'react';
+import React, {Fragment} from 'react';
 import classes from './Button.module.css';
 
-const Button = () => {
+const Button = ({size, type, children}) => {
+  const classList = [
+    classes.btn,
+    classes[`btn-${size}`],
+    classes[`btn-${type}`],
+  ];
+
   return (
-    <h1>Button</h1>
+    <Fragment>
+      <button 
+        className={classList.join(' ')}
+      >
+        {children}
+      </button>
+    </Fragment>
   )
 };
 

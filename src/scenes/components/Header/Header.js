@@ -3,7 +3,9 @@ import classes from './Header.module.css';
 
 const Header = () => {
   return (
-    <h1>Header</h1>
+    <header className={classes.container}>
+      <h1>List-it</h1>
+    </header>
   )
 };
 

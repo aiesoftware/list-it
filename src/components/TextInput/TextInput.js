@@ -1,9 +1,11 @@
-import React, {Component} from 'react';
+import React, {Fragment} from 'react';
 import classes from './TextInput.module.css';
 
-const TextInput = () => {
+const TextInput = ({placeholder}) => {
   return (
-    <h1>TextInput</h1>
+    <Fragment>
+      <input type="text" placeholder={placeholder} />
+    </Fragment>
   )
 };
 

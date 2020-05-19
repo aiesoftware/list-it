@@ -1,9 +1,16 @@
 import React, {Component} from 'react';
 import classes from './TaskClearer.module.css';
 
+import Button from '../../../../components/Button';
+
 const TaskClearer = () => {
   return (
-    <h1>TaskClearer</h1>
+    <Button
+      size="full"
+      type="secondary"
+    >
+      Clear tasks
+    </Button>
   )
 };
 

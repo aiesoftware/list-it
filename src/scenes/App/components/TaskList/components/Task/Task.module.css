@@ -1,0 +1,44 @@
+input[type="checkbox"] {
+  opacity: 0;
+  width: 1em;
+  height: 1em;
+  position:absolute;
+  top: 1em;
+}
+
+input[type="checkbox"]:checked ~ svg {
+  border-color: #fa8264
+}
+
+input[type="checkbox"] ~ svg path {
+  stroke: #000;
+}
+
+input[type="checkbox"]:checked ~ label {
+  text-decoration: line-through;
+}
+
+svg {
+  width: 1em;
+  height: 1em;
+  border: 2px solid #eee;
+  position: absolute;
+  top: 0.1em;
+}
+
+svg path {
+  transition: stroke-dashoffset .4s linear;
+}
+
+input[type="checkbox"]:checked ~ svg path {
+  stroke-dashoffset: 0;
+  stroke: currentColor;
+}
+
+label {
+  display: block;
+  padding-left: 1.2em;
+  position: relative;
+  color: gray;
+  top: 0;
+}
