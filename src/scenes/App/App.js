@@ -4,17 +4,17 @@ import classes from './App.module.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import TaskAdder from './components/TaskAdder';
-import TaskList from './components/TaskList';
+import ToggleableTaskList from './components/ToggleableTaskList';
 import TaskClearer from './components/TaskClearer';
 
-const App = () => {
+const App = ({store}) => {
   return (
     <Fragment>
       <Header />
 
       <main className={classes.container}>
         <TaskAdder />
-        <TaskList />
+        <ToggleableTaskList />
         <TaskClearer />
       </main>
       
