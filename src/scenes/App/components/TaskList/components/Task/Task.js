@@ -26,7 +26,7 @@ const Task = ({id, text}) => {
             strokeDashoffset="270" >
           </path>
       </svg>
-      <label htmlFor="item-1">{text}</label>
+      <label htmlFor={`item-${id}`}>{text}</label>
     </Fragment>
   )
 };

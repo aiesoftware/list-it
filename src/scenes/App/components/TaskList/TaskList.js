@@ -13,6 +13,12 @@ const TaskList = () => {
             text="Morning stretches"
           />
         </li>
+        <li className={classes.item}>
+          <Task 
+            id="2"
+            text="Emails"
+          />
+        </li>        
       </ul>
     </div>
   )
