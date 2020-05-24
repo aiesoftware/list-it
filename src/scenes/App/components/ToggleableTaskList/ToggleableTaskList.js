@@ -1,13 +1,17 @@
 import React, {Component} from 'react';
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 
 import TaskList from '../../../../components/TaskList'
+import {toggleTask} from '../../../../services/tasks/actions'
 
 const ToggleableTaskList = () => {
-  const tasks = useSelector(state => state.tasks);
+  const dispatch = useDispatch();
+  const tasks = useSelector(state => state);
+
   return (
     <TaskList 
       tasks={tasks}
+      onTaskClick={(id) => dispatch(toggleTask(id))}
     />
   )
 };
