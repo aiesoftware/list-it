@@ -1,4 +1,4 @@
-input[type="checkbox"] {
+.input[type="checkbox"] {
   opacity: 0;
   width: 1em;
   height: 1em;
@@ -6,7 +6,7 @@ input[type="checkbox"] {
   top: 1em;
 }
 
-svg {
+.svg {
   width: 1em;
   height: 1em;
   border: 2px solid #eee;
@@ -14,12 +14,12 @@ svg {
   top: 0.1em;
 }
 
-svg path {
+.svg .path {
   transition: stroke-dashoffset .4s linear;
   stroke: #000;
 }
 
-label {
+.label {
   display: block;
   padding-left: 1.2em;
   position: relative;

@@ -1,18 +1,9 @@
 .itemList {
   list-style: none;
-  height: 50vh;
 }
 
 .itemList .item {
   position: relative;
   font-size: 1em;
   margin-bottom: 1em;
-}
-
-.itemList .item input[type="checkbox"] {
-  opacity: 0;
-  width: 1em;
-  height: 1em;
-  position:absolute;
-  top: 1em;
 }

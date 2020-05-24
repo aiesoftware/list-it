@@ -19,6 +19,7 @@ const TaskAdder = () => {
     <Fragment>
       <div className={classes.container}>
         <input 
+          className={classes.input}
           type="text" 
           placeholder="new task" 
           value={input}
@@ -28,8 +29,11 @@ const TaskAdder = () => {
         <button 
           className={classList.join(' ')}
           onClick={() => {
-            dispatch(addTask(input))
-            setInput('')
+            if(input != '') {
+              dispatch(addTask(input));
+            }
+            
+            setInput('');
           }}
         >
           Add task

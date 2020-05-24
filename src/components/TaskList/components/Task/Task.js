@@ -4,12 +4,18 @@ import classes from './Task.module.css';
 const Task = ({id, text, completed, onClick}) => {
   return (
     <Fragment>
-      <input type="checkbox" id={`item-${id}`} />
+      <input 
+        className={classes.input} 
+        type="checkbox" 
+        id={`item-${id}`} 
+      />
       <svg 
+        className={classes.svg}
         viewBox="0 0 60 40"
         style={{borderColor: completed ? '#fa8264' : '#eee'}}
       >
         <path 
+          className={classes.path}
           d='
             M21,2 
             C13.4580219,4.16027394 1.62349378,18.3117469 3,19 
@@ -31,6 +37,7 @@ const Task = ({id, text, completed, onClick}) => {
         </path>
       </svg>
       <label 
+        className={classes.label}
         htmlFor={`item-${id}`}
         onClick={onClick}
         style={{textDecoration: completed ? 'line-through' : 'none'}} 

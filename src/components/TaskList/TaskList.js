@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import classes from './TaskList.module.css';
 
+import classes from './TaskList.module.css';
 import Task from './components/Task';
 
 const TaskList = ({tasks, onTaskClick}) => {

@@ -1,12 +1,22 @@
 const reducer = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TASK':
-      return [...state, {id: action.id, text: action.text, completed: false}]
+      return [...state, createTask(action)]
     case 'TOGGLE_TASK':
       return state.map((task) => toggleTask(task, action.id));
+    case 'CLEAR_TASKS':
+      return [];
     default:
       return state;  
   }
+}
+
+const createTask = (task) => {
+  return {
+    id: task.id,
+    text: task.text,
+    completed: false
+  };
 }
 
 const toggleTask = (task, id) => {
