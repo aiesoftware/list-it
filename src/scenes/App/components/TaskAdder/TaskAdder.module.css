@@ -13,10 +13,10 @@
   outline: none;
 }
 
-input:focus::placeholder {
+.input:focus::placeholder {
   color: transparent;
 }
 
-input::placeholder {
+.input::placeholder {
   text-transform: capitalize;
 }
