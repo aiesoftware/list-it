@@ -14,7 +14,7 @@ const App = ({store}) => {
 
       <main className={classes.container}>
         <TaskAdder />
-        <ToggleableTaskList />
+        <ToggleableTaskList store={store} />
         <TaskClearer />
       </main>
       

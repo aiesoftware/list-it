@@ -3,22 +3,15 @@ import classes from './TaskList.module.css';
 
 import Task from './components/Task';
 
-const TaskList = () => {
+const TaskList = ({tasks}) => {
   return (
     <div>
       <ul className={classes.itemList}>
-        <li className={classes.item}>
-          <Task 
-            id="1"
-            text="Morning stretches"
-          />
-        </li>
-        <li className={classes.item}>
-          <Task 
-            id="2"
-            text="Emails"
-          />
-        </li>        
+        {tasks.map((task) => (
+          <li key={task.id} className={classes.item}>
+            <Task id={task.id} text={task.text} />
+          </li>
+        ))}
       </ul>
     </div>
   )

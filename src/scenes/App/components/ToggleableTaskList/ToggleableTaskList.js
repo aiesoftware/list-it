@@ -2,9 +2,12 @@ import React, {Component} from 'react';
 
 import TaskList from '../../../../components/TaskList'
 
-const ToggleableTaskList = () => {
+const ToggleableTaskList = ({store}) => {
+  const state = store.getState();
   return (
-    <TaskList />
+    <TaskList 
+      tasks={state.tasks}
+    />
   )
 };
 

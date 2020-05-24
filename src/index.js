@@ -8,3 +8,5 @@ ReactDOM.render(
   <App store={store} />,
   document.getElementById('root')
 );
+
+store.subscribe(() => console.log(store.getState()));
