@@ -15,10 +15,17 @@ const toggleTask = (id) => {
   };
 }
 
+const deleteTask = (id) => {
+  return {
+    type: 'DELETE_TASK',
+    id
+  }
+}
+
 const clearTasks = () => {
   return {
     type: 'CLEAR_TASKS'
   }
 }
 
-export {addTask, toggleTask, clearTasks};
+export {addTask, toggleTask, deleteTask, clearTasks};

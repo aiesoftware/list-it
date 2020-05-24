@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 
 import TaskList from '../../../../components/TaskList'
-import {toggleTask} from '../../../../services/tasks/actions'
+import {toggleTask, deleteTask} from '../../../../services/tasks/actions'
 
 const ToggleableTaskList = () => {
   const dispatch = useDispatch();
@@ -11,7 +11,8 @@ const ToggleableTaskList = () => {
   return (
     <TaskList 
       tasks={tasks}
-      onTaskClick={(id) => dispatch(toggleTask(id))}
+      onTaskToggle={(id) => dispatch(toggleTask(id))}
+      onTaskDelete={(id) => dispatch(deleteTask(id))}
     />
   )
 };
