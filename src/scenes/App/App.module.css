@@ -12,10 +12,24 @@
 html {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
+  height: 100%;
+}
+
+#root {
+
 }
 
 main.container {
   margin-top: 1rem;
   padding: 1rem;
-  min-height: 81.5vh;
+  flex-grow: 1;
+  min-height: 100%;
+}
+
+main, footer {
+  flex-shrink: 0;
+}
+
+footer {
+  margin-top: 0.5rem;
 }

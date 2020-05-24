@@ -10,8 +10,6 @@ import TaskClearer from './components/TaskClearer';
 const App = () => {
   return (
     <Fragment>
-      <Header />
-
       <main className={classes.container}>
         <TaskAdder />
         <ToggleableTaskList />

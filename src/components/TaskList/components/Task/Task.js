@@ -1,4 +1,6 @@
 import React, {Fragment} from 'react';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faTrash} from '@fortawesome/free-solid-svg-icons';
 import classes from './Task.module.css';
 
 const Task = ({id, text, completed, onToggle, onDelete}) => {
@@ -45,7 +47,7 @@ const Task = ({id, text, completed, onToggle, onDelete}) => {
         >
           {text}
         </label>
-        <span onClick={onDelete}>X</span>
+        <span onClick={onDelete}><FontAwesomeIcon icon={faTrash} color="#fa8264" /></span>
       </div>
     </Fragment>
   )
