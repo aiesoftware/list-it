@@ -7,14 +7,14 @@ import TaskAdder from './components/TaskAdder';
 import ToggleableTaskList from './components/ToggleableTaskList';
 import TaskClearer from './components/TaskClearer';
 
-const App = ({store}) => {
+const App = () => {
   return (
     <Fragment>
       <Header />
 
       <main className={classes.container}>
         <TaskAdder />
-        <ToggleableTaskList store={store} />
+        <ToggleableTaskList />
         <TaskClearer />
       </main>
       
