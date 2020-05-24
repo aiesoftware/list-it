@@ -5,15 +5,15 @@
   border-radius: 2px;
 }
 
-.btn-full {
+.btnFull {
   width: 100%;
   letter-spacing: 1.5px;
 }
 
-.btn-primary {
+.btnPrimary {
   background-color: lightblue;
 }
 
-.btn-secondary {
+.btnSecondary {
   background-color: #fa8264
 }

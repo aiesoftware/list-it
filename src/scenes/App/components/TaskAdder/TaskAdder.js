@@ -1,23 +1,39 @@
-import React, {Fragment} from 'react';
-import classes from './TaskAdder.module.css';
+import React, {Fragment, useState} from 'react';
+import {useDispatch} from 'react-redux';
 
-import TextInput from '../../../../components/TextInput';
-import Button from '../../../../components/Button';
+import classes from './TaskAdder.module.css';
+import buttonClasses from '../../../../components/Button/Button.module.css';
+import {addTask} from '../../../../services/tasks/actions';
 
 const TaskAdder = () => {
+  const dispatch = useDispatch();
+  const [input, setInput] = useState('');
+
+  const classList = [
+    buttonClasses.btn,
+    buttonClasses.btnFull,
+    buttonClasses.btnPrimary
+  ];
+
   return (
     <Fragment>
       <div className={classes.container}>
-        <TextInput 
-          placeholder="new task"
+        <input 
+          type="text" 
+          placeholder="new task" 
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
         />
 
-        <Button 
-          size="full"
-          type="primary"
+        <button 
+          className={classList.join(' ')}
+          onClick={() => {
+            dispatch(addTask(input))
+            setInput('')
+          }}
         >
           Add task
-        </Button>
+        </button>
       </div>
     </Fragment>
   );

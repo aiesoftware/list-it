@@ -1,24 +1,20 @@
-const initialState = [
-    {id: 1, text: 'Walk the dog', completed: true},
-    {id: 2, text: 'Make breakfast', completed: false},
-    {id: 3, text: 'Plan tasks for the day', completed: false},
-  ];
-
-const reducer = (state = initialState, action) => {
+const reducer = (state = [], action) => {
   switch (action.type) {
+    case 'ADD_TASK':
+      return [...state, {id: action.id, text: action.text, completed: false}]
     case 'TOGGLE_TASK':
-      return state.map((s) => {
-        if (s.id !== action.id) {
-          return s;
-        }
-
-        return {...s, completed: !s.completed};
-      });
-
+      return state.map((task) => toggleTask(task, action.id));
     default:
       return state;  
   }
-  return state;
+}
+
+const toggleTask = (task, id) => {
+  if (id !== task.id) {
+    return task;
+  }
+
+  return {...task, completed: !task.completed};
 }
 
 export default reducer;

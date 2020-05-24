@@ -1,16 +1,23 @@
 import React, {Component} from 'react';
 import classes from './TaskClearer.module.css';
 
-import Button from '../../../../components/Button';
+import buttonClasses from '../../../../components/Button/Button.module.css';
 
 const TaskClearer = () => {
+
+  const classList = [
+    buttonClasses.btn,
+    buttonClasses.btnFull,
+    buttonClasses.btnSecondary
+  ];
+
   return (
-    <Button
-      size="full"
-      type="secondary"
+    <button 
+      className={classList.join(' ')}
+      onClick={() => dispatch()}
     >
       Clear tasks
-    </Button>
+    </button>
   )
 };
 
