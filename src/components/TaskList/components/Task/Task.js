@@ -15,7 +15,7 @@ const Task = ({id, text, completed, onToggle, onDelete}) => {
         <svg 
           className={classes.svg}
           viewBox="0 0 60 40"
-          style={{borderColor: completed ? '#fa8264' : '#eee'}}
+          style={{borderColor: completed ? '#fcbeae' : '#eee'}}
         >
           <path 
             className={classes.path}
@@ -47,7 +47,7 @@ const Task = ({id, text, completed, onToggle, onDelete}) => {
         >
           {text}
         </label>
-        <span onClick={onDelete}><FontAwesomeIcon icon={faTrash} color="#fa8264" /></span>
+        <span onClick={onDelete}><FontAwesomeIcon icon={faTrash} color="#fcbeae" /></span>
       </div>
     </Fragment>
   )

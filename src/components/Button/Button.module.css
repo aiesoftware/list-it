@@ -1,8 +1,8 @@
 .btn {
   padding: 0.7rem;
-  border: none;
   text-transform: uppercase;
   border-radius: 2px;
+  border: none;
 }
 
 .btnFull {
@@ -15,5 +15,5 @@
 }
 
 .btnSecondary {
-  background-color: #fa8264
+  background-color: #fcbeae;
 }
