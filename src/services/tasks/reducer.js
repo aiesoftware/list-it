@@ -1,20 +1,26 @@
-const reducer = (state = [
-  {id: 1, text: 'Take the bins out', completed: false},
-  {id: 2, text: 'Go to the garage', completed: false},
-  {id: 3, text: 'A very long task that will take all day then do that thing', completed: false},
-], action) => {
+import {loadFromStorage, saveToStorage} from '../localStorage';
+
+const reducer = (state = loadFromStorage('tasks') || [], action) => {
+  let updatedState
   switch (action.type) {
     case 'ADD_TASK':
-      return [...state, createTask(action)]
+      updatedState = [...state, createTask(action)];
+      break;
     case 'TOGGLE_TASK':
-      return state.map((task) => toggleTask(task, action.id));
+      updatedState = state.map((task) => toggleTask(task, action.id));
+      break;
     case 'DELETE_TASK':
-      return state.filter((task) => !taskHasId(task, action.id));
+      updatedState = state.filter((task) => !taskHasId(task, action.id));
+      break;
     case 'CLEAR_TASKS':
-      return [];
+      updatedState = [];
+      break;
     default:
-      return state;  
+      updatedState = state;  
   }
+
+  saveToStorage('tasks', updatedState);
+  return updatedState;
 }
 
 const createTask = (task) => {
