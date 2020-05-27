@@ -1,0 +1,20 @@
+{
+  "name": "List-it",
+  "short_name": "List-it",
+  "start_url": "/",
+  "background_color": "#333",
+  "theme_color": "#333",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/images/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
